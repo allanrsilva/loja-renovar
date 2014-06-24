@@ -1,0 +1,13 @@
+/*
+ Theme Name:   Customização Artezzo
+ Theme URI:    http://www.elegantthemes.com/gallery/divi/
+ Description:  Customização do tema Divi para o projeto Soluções para corretores
+ Author:       Allan R Silva
+ Author URI:   http://artezzo.com.br
+ Template:     Divi
+ Version:      1.0.0
+ Text Domain:  Divi-child
+*/
+
+@import '../Divi/style.css';
+
