@@ -39,7 +39,7 @@
 		?>
 		<nav class="nav-top">
 			<div class="nav-top-menu">
-				<?php echo wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => 'top-menu', 'echo' => false ) );?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => 'top-menu', 'echo' => true ) );?>
 			</div>
 			<a href="#" title="Conheça nossos cursos" class="btn-cursos">Cursos</a>
 			<div class="nav-top-social">
@@ -110,4 +110,11 @@
 		</div>				
 	</header>
 	<div class="clearfix"></div>
+	<div class="container">
+		<nav class="nav-second">
+			<div class="nav-second-menu">
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => 'second-menu', 'echo' => true) );?>
+			</div>
+		</nav>
+	</div>
 	

@@ -74,7 +74,6 @@ body {
 	font-family: 'Righteous', cursive;
 	font-size: 14px;
 	color: #f85b3f;
-	opacity: 0.7;
 }
 	.btn-cursos {
 		width: 78px;
@@ -134,7 +133,7 @@ body {
 .header-main {
 	width: 1060px;
 	height: 174px;
-	margin: 22px 0 0 0;
+	margin: 22px 0  97px 0;
 	float: left;
 	background: url('assets/img/bg-header.png') right top no-repeat;
 	clear:both;
@@ -223,4 +222,56 @@ body {
 	font-size: 13px;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+
+/*
+	SECOND MENU
+*/
+
+.nav-second {
+	background: url('assets/img/bg-menu.png') center top no-repeat;
+	width: 946px;
+	height: 52px;
+	margin: auto;
+}
+
+.second-menu {
+	margin: auto;
+	padding: 0;
+	list-style: none;
+	width: 812px;
+	display: table;
+}
+
+.second-menu .menu-item {
+	float: left;
+	height: 52px;
+	padding-left:  4px;
+	padding-right: 4px;
+	display: block;
+	width: auto;
+}
+
+.second-menu .menu-item-last {
+	padding-right:0 !important; 
+}
+
+.second-menu .menu-item a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+	padding: 15px 0 0 0;
+	height: 37px;
+}
+
+.second-menu .menu-item a:hover {
+	background-color:#fff; 
+	color: #da005b;
+
+
 }
