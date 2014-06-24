@@ -46,9 +46,6 @@ var ET_PageBuilder = ET_PageBuilder || {};
 
 	$( document ).ready( function() {
 
-		var background = $('.slide-item').data('background');
-		$('.slide-item').backstretch(background);
-
 		// Models
 
 		ET_PageBuilder.Module = Backbone.Model.extend( {

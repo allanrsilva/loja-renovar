@@ -35,11 +35,9 @@
 		?>
 		<nav class="nav-top">
 			<div class="nav-top-menu">
-				<?php echo wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => $menuClass, 'menu_id' => 'top-menu', 'echo' => false ) );?>
+				<?php echo wp_nav_menu( array( 'theme_location' => 'primary-menu', 'container' => '', 'fallback_cb' => '', 'menu_class' => 'top-menu', 'echo' => false ) );?>
 			</div>
-			<div class="call-to-action">
-				<a href="#" title="Conheça nossos cursos">Cursos</a>
-			</div>
+			<a href="#" title="Conheça nossos cursos" class="btn-cursos">Cursos</a>
 			<div class="nav-top-social">
 				<?php
 					if ( ! $et_contact_info_defined && true === $show_header_social_icons ) {

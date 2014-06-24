@@ -9,5 +9,114 @@
  Text Domain:  Divi-child
 */
 
-@import '../Divi/style.css';
+@import url(http://fonts.googleapis.com/css?family=Righteous|Oswald:400,700,300);
 
+
+body {
+	background: url('assets/img/SITE.jpg') center top no-repeat;
+	margin: 0;
+}
+
+.et-social-icons {
+	margin: 0;
+	padding: 0;
+}
+
+.et-social-icon {
+	display: inline-block;
+}
+
+.et-social-icon .icon {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-indent: -99999px;
+}
+
+.et-social-facebook  {
+	background: url('assets/img/btn-facebook.png') left top no-repeat;
+	width: 22px;
+	height: 22px;
+	display: block;
+}
+
+.et-social-twitter  {
+	background: url('assets/img/btn-twitter.png') left top no-repeat;
+	width: 22px;
+	height: 22px;
+	display: block;
+}
+
+.container {
+	width: 980px;
+	height: auto;
+	margin: auto;
+	display:table;
+	padding: 0;
+}
+
+
+/*
+		MENU DO TOPO
+*/
+.nav-top {
+	width:771px;
+	height: 55px;
+	padding: 0 28px;
+	background: url('assets/img/bg-top-menu.png') center top no-repeat;
+	margin: auto;
+	font-family: 'Righteous', cursive;
+	font-size: 14px;
+	color: #f85b3f;
+	opacity: 0.7;
+}
+	.btn-cursos {
+		width: 78px;
+		height: 41px;
+		background: url('assets/img/btn-cursos.png') left top no-repeat;
+		display: block;
+		float: left;
+		text-transform: uppercase;
+		text-decoration: none;
+		text-align: center;
+		color: #fff;
+		font-size: 17px;
+		font-family: 'Oswald', sans-serif;
+		font-weight: bold;
+		padding: 15px 0 0 0;
+		margin: 0 30px 0 72px ;
+	}
+	
+	.nav-top-social {
+		float: left;
+		margin: 15px 0 0 87px;
+	}
+
+	.nav-top-social .et-social-icon {
+		float: left;
+		margin: 0 4px;
+	}
+
+
+.top-menu{
+	float: left;
+	list-style: none;
+	padding: 0;
+	margin: 15px 0;
+}
+
+.top-menu .menu-item {
+	float: left;
+	padding: 0 9px;
+	border-right:2px solid  #f85b3f;
+}
+
+.top-menu .menu-item-last {
+	border-right:none !important;
+}
+
+.top-menu .menu-item  a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #f85b3f;
+}
