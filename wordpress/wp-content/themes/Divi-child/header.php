@@ -1,3 +1,7 @@
+<?php
+	$template_directory = get_template_directory_uri();
+	define(THEME_DIR, $template_directory.'-child');
+?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -62,15 +66,15 @@
 			</div>
 		</nav>
 	</div>
-	<header>
-		<div class="container clearfix">
+	<header class="header-main">
+		<div class="container-header">
 			<?php
 				$logo = ( $user_logo = et_get_option( 'divi_logo' ) ) && '' != $user_logo
 					? $user_logo
-					: $template_directory_uri . '/images/logo.png';
+					: THEME_DIR . '/assets/img/logo.png';
 			?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-					<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" id="logo" />
+					<img src="<?php echo esc_attr( $logo ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" class="logo-header" />
 				</a>
 				<?php
 					if ( ! $et_top_info_defined ) {
@@ -81,22 +85,29 @@
 					?>
 
 					<?php if ( false !== et_get_option( 'show_search_icon', true ) ) : ?>
-					<div id="et_top_search">
-						<span id="et_search_icon"></span>
-						<form role="search" method="get" class="et-search-form et-hidden" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<?php
-							printf( '<input type="search" class="et-search-field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
-								esc_attr_x( 'Search &hellip;', 'placeholder', 'Divi' ),
-								get_search_query(),
-								esc_attr_x( 'Search for:', 'label', 'Divi' )
-							);
-						?>
-						</form>
-					</div>
+						<div id="et_top_search">
+							<p class="title-search">Encontre o que deseja</p> 
+							<form role="search" method="get" class="et-search-form et-hidden" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+							<div class="content-form">
+							<?php
+								printf( '<input type="search" class="et-search-field" value="%1$s" name="s" title="%2$s" />',
+									get_search_query(),
+									esc_attr_x( 'Search for:', 'label', 'Divi' )
+								);
+							?>
+								<span class="et_search_icon search-header"></span>
+							</div>		
+							</form>
+						</div>
 					<?php endif; // true === et_get_option( 'show_search_icon', false ) ?>
-
-					<?php do_action( 'et_header_top' ); ?>
+					<div class="top-show-car">
+						<span class="icon-car-sale"></span>
+						<p class="links-show-car">
+							<a href="<?php get_permalink();?>" class="link-show-car">Minha sacola&nbsp;&nbsp;|</a><a href="<?php get_permalink();?>" class="link-show-car">&nbsp;&nbsp; Entrar</a><br>
+							<a href="<?php get_permalink();?>" class="link-show-car">Sacola vazia 	<?php et_show_cart_total();?></a>
+						</p>
+					</div>
 		</div>				
 	</header>
-		<?php et_show_cart_total();?>
+	<div class="clearfix"></div>
 	

@@ -9,8 +9,7 @@
  Text Domain:  Divi-child
 */
 
-@import url(http://fonts.googleapis.com/css?family=Righteous|Oswald:400,700,300);
-
+@import url(http://fonts.googleapis.com/css?family=Righteous|Oswald:400,700,300|Handlee);
 
 body {
 	background: url('assets/img/SITE.jpg') center top no-repeat;
@@ -45,6 +44,13 @@ body {
 	width: 22px;
 	height: 22px;
 	display: block;
+}
+
+.icon-car-sale {
+	width: 45px;
+	height: 53px;
+	display: block;
+	background: url('assets/img/icon-car-sale.png') left top no-repeat;
 }
 
 .container {
@@ -119,4 +125,102 @@ body {
 	text-transform: uppercase;
 	text-decoration: none;
 	color: #f85b3f;
+}
+
+/*
+	HEADER PRINCIPAL
+*/
+
+.header-main {
+	width: 1060px;
+	height: 174px;
+	margin: 22px 0 0 0;
+	float: left;
+	background: url('assets/img/bg-header.png') right top no-repeat;
+	clear:both;
+}
+
+.header-main .container-header {
+	width: 852px;
+	float: right;
+}
+
+.clearfix {
+	clear: both;
+} 
+
+.logo-header{
+	width: 99px;
+	height: 119px;
+	display: block;
+	float: left;
+	margin: 28px 0 0 0;
+}
+
+#et_top_search { 
+	float: left; 
+	display: inline-block !important; 
+	margin: 66px 0 0 75px;
+}
+
+#et_top_search .title-search {
+	font-family: 'Handlee', cursive;
+	font-size: 16px;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0;
+
+}
+
+#et_top_search .content-form {
+	background: #fff;
+	display: inline-block;
+	padding: 0 5px;
+}
+
+#et_top_search .et-search-field {
+	width: 262px;
+	height: 19px;
+	border: none;
+	padding: 5px 10px;
+	float: left;
+}
+
+.et_search_icon {
+	background: url('assets/img/icon-search.png') left top no-repeat;
+	width: 20px;
+	height: 20px;
+	display: block;
+}
+
+.search-header {
+	float: left;
+	margin: 8px 3px 0 0;
+}
+
+.top-show-car {
+	width: 250px;
+	height: 80px;
+	float: left;
+	margin: 54px 0 0 40px;
+	padding: 0 0 0 40px;
+	border-left: 1px solid #fffdfd;	 
+}
+
+.top-show-car .icon-car-sale {
+	float: left;
+	margin: 13px 0 0 0;
+}
+
+.top-show-car .links-show-car {
+	margin: 25px 0 0 25px;
+	float: left;
+}
+.top-show-car .link-show-car {
+	font-family: 'Handlee', cursive;
+	color: #fff;
+	float: left;
+	font-size: 13px;
+	text-transform: uppercase;
+	text-decoration: none;
 }
