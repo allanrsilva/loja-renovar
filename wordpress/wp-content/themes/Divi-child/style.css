@@ -275,3 +275,58 @@ body {
 
 
 }
+
+/*
+	SLIDESHOW
+*/
+
+.cycle-slideshow {
+	width: 917px;
+	height: 397px;
+	margin: auto;
+	display: block;
+}
+
+.pager-slideshow {
+	float: right;
+	width: auto;
+	display: block;
+}
+
+.item-pager {
+	background: url('assets/img/btn-pager.png') left top no-repeat;
+	width: 26px;
+	height: 30px;
+	display: block;
+	float: left;
+	position: relative;
+	z-index: 9999999;
+	top: -30px;
+	margin-right: 4px;
+}
+
+.item-pager a {
+	color: #fb5d41;
+    display: block;
+    font-family: 'Oswald',sans-serif;
+    font-size: 10px;
+    height: 100%;
+    margin: 9px 0 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    -webkit-transition:	all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+
+.cycle-pager-active {
+	height: 46px;
+	top: -46px;
+	-webkit-transition:	all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;																																																																																																																											
+}
+
