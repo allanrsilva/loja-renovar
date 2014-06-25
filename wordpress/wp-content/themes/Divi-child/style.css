@@ -280,7 +280,7 @@ body {
 	SLIDESHOW
 */
 
-.cycle-slideshow {
+.banner-inicial {
 	width: 917px;
 	height: 397px;
 	margin: auto;
@@ -330,3 +330,25 @@ body {
 	transition: all 0.2s linear;																																																																																																																											
 }
 
+/*
+	HOME
+*/
+
+.chamada-home {
+	background: url('assets/img/chamada-home.png') center top no-repeat;
+	width: 949px;
+	height: 103px;
+	display: block;
+	margin:auto;
+}
+
+.banners-laterais {
+	width: 200px;
+	height: 1072px;
+	display: table;
+	margin: 1px 0 0 33px;
+}
+
+.banners-laterais .banner-lateral-01 {
+	margin-bottom:30px; 
+}

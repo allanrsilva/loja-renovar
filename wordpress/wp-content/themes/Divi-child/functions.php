@@ -9,8 +9,13 @@
 	
 	$template_directory = get_template_directory();
 
+
 	wp_register_script( 'jquery-cycle-2', THEME_DIR . '/assets/js/jquery.cycle2.min.js', array('jquery'), 1.0, true);
 	wp_enqueue_script( 'jquery-cycle-2' );
+
+
+		wp_register_script( 'admin-custom', THEME_DIR . '/assets/js/admin-custom.js', array('jquery'), 1.0, true);
+		wp_enqueue_script( 'admin-custom' );
 
 	/**
 	* Registers a new post type
@@ -79,16 +84,22 @@ function shortcode_banner( $atts ) {
 
 		switch ($template) {
 			case 'banner-inicial':
-				$template = "01"; 
+				$template = "01";
+				$class = "banner-inicial"; 
+				$pagination = true;
 				break;
 			
 			case 'banner-lateral-01':
 				$template = "02"; 
+				$class = "banner-lateral-01"; 
+				$pagination = false;
 				break;	
 
 			
 			case 'banner-lateral-02':
 				$template = "03"; 
+				$class="banner-lateral-02";
+				$pagination = false;
 				break;					
 		}
 
@@ -104,20 +115,21 @@ function shortcode_banner( $atts ) {
 		if($loop->have_posts()) :
 	
 				?>
-				<div class="cycle-slideshow"
+				<div class="<?php echo $class; ?>"
 					data-cycle-pager="> .pager-slideshow"
+					<?php if($pagination) {?>
 					data-cycle-pager-template="<strong class='item-pager'><a href=#> {{slideNum}} </a></strong>"
+					<?php } ?>
 				>
+					<?php if($pagination) { ?>
 					<div class="pager-slideshow"></div>
+					<?php } ?>
 					<?php while ($loop->have_posts()) : $loop->the_post();
 						$type_banner = get_field('type_banner');
-
 						if($template === $type_banner) :
 					 ?>
 						<img src="<?php the_field('image_banner'); ?>" class="img-responsive" />
 					<?php	
-						else :
-							echo '<div class="container"><div class="alert alert-danger"><p><strong>ERRO:</strong> nenhum banner foi adicionado para esse template!</p></div></div>';
 						endif;
 					 endwhile; ?>
 				</div>
